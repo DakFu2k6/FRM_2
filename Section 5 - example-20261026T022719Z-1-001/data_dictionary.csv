@@ -1,0 +1,30 @@
+﻿column,mo_ta,kieu,nguon,nhom_thong_tin,vai_tro,gia_tri_dac_biet,co_trong_file,ghi_chu
+app_id,Mã hồ sơ,text,Hệ thống,,Hệ thống,,Tất cả,SH23xxxxxx / SH24 / SH26
+app_date,Ngày nộp hồ sơ,date,Hệ thống,,Hệ thống,,Tất cả,YYYY-MM-DD
+channel,Kênh nộp hồ sơ,category,LOS,,Phân khúc,,Tất cả,Chi nhánh / Đối tác / Online
+customer_type,Loại khách hàng,category,Core,,Phân khúc,,Tất cả,Hiện hữu = đã từng vay tại Sông Hồng / Mới = chưa từng vay tại Sông Hồng (có thể đã có tài khoản tiền gửi)
+province,Tỉnh/thành,category,LOS,,Phân khúc,,Tất cả,8 tỉnh/thành
+region,Vùng,category,LOS,,Phân khúc,,Tất cả,Miền Bắc / Miền Trung / Miền Nam
+loan_amount_mil,Số tiền vay (triệu VND),number,LOS,Khả năng trả nợ,Đặc trưng,,Tất cả,10–300 triệu; hạn mức duyệt theo thu nhập
+age,Tuổi,number,LOS,Nhân khẩu & ổn định,Đặc trưng,,Tất cả,Có 122 giá trị bất thường (<18 hoặc >75) trong mẫu Good/Bad — lỗi nhập liệu
+gender,Giới tính,category,LOS,Nhân khẩu & ổn định,Đặc trưng,,Tất cả,"Biến nhạy cảm — dùng cho bài tập loại biến, không đưa vào mô hình"
+occupation,Nghề nghiệp,category,LOS,Nhân khẩu & ổn định,Đặc trưng,,Tất cả,
+home_status,Tình trạng nhà ở,category,LOS,Quan hệ ngân hàng & tài sản,Đặc trưng,,Tất cả,Sở hữu / Ở cùng gia đình / Thuê
+income_mil,Thu nhập hàng tháng (triệu VND),number,LOS,Khả năng trả nợ,Đặc trưng,,Tất cả,Trống = khách không khai; từ 01/07/2023 biểu mẫu LOS mới yêu cầu khai cả thu nhập khác nên thu nhập khai báo tăng khoảng 25% (trung vị 12 → 15 triệu); 76 giá trị > 500 trong mẫu Good/Bad (lỗi đơn vị)
+work_months,Thời gian làm việc hiện tại (tháng),number,LOS,Nhân khẩu & ổn định,Đặc trưng,,Tất cả,Trống = không khai; không vượt quá số tháng từ 18 tuổi
+dti_pct,Tỷ lệ nợ trên thu nhập (%),number,LOS,Khả năng trả nợ,Đặc trưng,,Tất cả,(Nghĩa vụ trả nợ hiện có + kỳ trả khoản vay mới) / thu nhập thực; 29 giá trị > 200%
+cic_hist_months,Số tháng có lịch sử tín dụng (CIC),number,CIC,Lịch sử tín dụng (CIC),Đặc trưng,,Tất cả,0 = chưa có lịch sử tín dụng; không vượt quá số tháng từ 18 tuổi
+num_lenders,Số TCTD đang có dư nợ (CIC),number,CIC,Nhu cầu & mức dùng tín dụng,Đặc trưng,,Tất cả,0 khi chưa có lịch sử tín dụng
+card_util_pct,Tỷ lệ sử dụng hạn mức thẻ (%) (CIC),number,CIC,Nhu cầu & mức dùng tín dụng,Đặc trưng,,Tất cả,Trống = không có thẻ (chỉ có thẻ khi có ít nhất 1 TCTD); 2.139 giá trị > 100% (chi tiêu vượt hạn mức)
+inq_6m,Số lần tra cứu CIC 6 tháng,number,CIC,Nhu cầu & mức dùng tín dụng,Đặc trưng,,Tất cả,
+dpd_cnt_6m,Số lần trễ hạn 6 tháng (CIC),number,CIC,Lịch sử tín dụng (CIC),Đặc trưng,,Tất cả,Tương quan cao với dpd_cnt_12m; luôn ≤ dpd_cnt_12m
+dpd_cnt_12m,Số lần trễ hạn 12 tháng (CIC),number,CIC,Lịch sử tín dụng (CIC),Đặc trưng,,Tất cả,0–6; không vượt quá số tháng có lịch sử CIC
+deposit_avg_3m_mil,Số dư tiền gửi bình quân 3 tháng (triệu VND),number,Core,Quan hệ ngân hàng & tài sản,Đặc trưng,,Tất cả,Trống = chưa có tài khoản tiền gửi tại Sông Hồng
+curr_max_cic_group,Nhóm nợ cao nhất tại mọi TCTD khi xếp hạng (CIC),number,CIC,Lịch sử tín dụng (CIC),Bỏ qua,,Tất cả,"0 = không có dư nợ tại TCTD nào; 1–5 = nhóm nợ. Quy tắc chính sách: nhóm ≥ 2 → từ chối, nên mọi hồ sơ được duyệt có nhóm 0–1; đây cũng là điều kiện đầu tiên của định nghĩa Good. Không đưa vào scorecard (tr. 304)"
+decision,Quyết định của scorecard cũ,category,Hệ thống,,Hệ thống,,"dev_2023, oot_2024H1","Approved / Rejected. Năm 2023 ngân hàng từ chối theo: (1) quy tắc chính sách — dpd_cnt_12m ≥ 3, dti_pct > 100, inq_6m ≥ 8, thiếu cả thu nhập và tiền gửi, tuổi < 20, curr_max_cic_group ≥ 2 (đang có nợ nhóm 2 trở lên tại TCTD); (2) điểm scorecard cũ thấp, có xem xét của thẩm định viên quanh ngưỡng cắt. Vì vậy hồ sơ bị từ chối rủi ro hơn rõ rệt so với hồ sơ được duyệt (dữ liệu mô phỏng)"
+perf_class,Phân loại hiệu suất,category,Hệ thống,,Hệ thống,,"dev_2023, oot_2024H1","Good / Bad / Indeterminate / Excluded / Rejected. Good = không có dư nợ hoặc nhóm 1 tại mọi TCTD khi xếp hạng, luôn nhóm 1 (DPD ≤ 9) trong 12 tháng đầu, không bị cơ cấu/giãn nợ; Bad = từng quá hạn 90+ ngày (nhóm 3–5) trong 12 tháng đầu; Indeterminate = còn lại (từng nhóm 2, cơ cấu/giãn nợ, tất toán tự nguyện trong cửa sổ — tr. 100); Excluded = nhân viên, gian lận, chưa đủ 12 tháng quan sát"
+exclusion_reason,Lý do loại trừ,category,Hệ thống,,Hệ thống,,dev_2023,Nhân viên ngân hàng / Gian lận đã xác nhận
+indeterminate_reason,Lý do indeterminate,category,Hệ thống,,Hệ thống,,dev_2023,DPD 10–89 (nhóm 2) / Tất toán tự nguyện trong cửa sổ / Cơ cấu/giãn nợ trong 12 tháng
+max_dpd_12m,Số ngày quá hạn lớn nhất trong 12 tháng đầu,number,Hệ thống,,Hệ thống,,"dev_2023, oot_2024H1",Trống với hồ sơ bị từ chối/loại trừ
+target,Biến mục tiêu,0/1,Hệ thống,,Hệ thống,,"dev_2023, oot_2024H1","1 = Bad (từng quá hạn 90+ ngày, nhóm 3–5, trong 12 tháng), 0 = Good; trống nếu không phải Good/Bad"
+restr_mob,Tháng trên sổ bị cơ cấu nợ/giãn nợ,number,Hệ thống,,Hệ thống,,perf_monthly,Trống = không cơ cấu/giãn nợ; Good bị cơ cấu/giãn nợ trong 12 tháng đầu → Indeterminate
