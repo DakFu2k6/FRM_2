@@ -1,0 +1,708 @@
+{
+ "channel": {
+  "variable": "channel",
+  "kind": "cat",
+  "direction": "free",
+  "iv_train": 0.015632404468755287,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "Chi nhánh | Đối tác",
+    "woe": 0.05674994458223963,
+    "categories": [
+     "Chi nhánh",
+     "Đối tác"
+    ]
+   },
+   {
+    "bin": 1,
+    "label": "Online",
+    "woe": -0.27582007114739954,
+    "categories": [
+     "Online"
+    ]
+   },
+   {
+    "bin": 2,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "customer_type": {
+  "variable": "customer_type",
+  "kind": "cat",
+  "direction": "free",
+  "iv_train": 0.03582549647879633,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "Hiện hữu",
+    "woe": 0.2836236461673197,
+    "categories": [
+     "Hiện hữu"
+    ]
+   },
+   {
+    "bin": 1,
+    "label": "Mới",
+    "woe": -0.12669135433717216,
+    "categories": [
+     "Mới"
+    ]
+   },
+   {
+    "bin": 2,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "province": {
+  "variable": "province",
+  "kind": "cat",
+  "direction": "free",
+  "iv_train": 0.03883759890241384,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "TP. Hồ Chí Minh",
+    "woe": 0.29183117144398923,
+    "categories": [
+     "TP. Hồ Chí Minh"
+    ]
+   },
+   {
+    "bin": 1,
+    "label": "Hà Nội",
+    "woe": 0.1012209473574051,
+    "categories": [
+     "Hà Nội"
+    ]
+   },
+   {
+    "bin": 2,
+    "label": "Cần Thơ | Bình Dương | Hải Phòng | Thanh Hóa | Đà Nẵng",
+    "woe": -0.10701423023839055,
+    "categories": [
+     "Cần Thơ",
+     "Bình Dương",
+     "Hải Phòng",
+     "Thanh Hóa",
+     "Đà Nẵng"
+    ]
+   },
+   {
+    "bin": 3,
+    "label": "Nghệ An",
+    "woe": -0.36170952706664344,
+    "categories": [
+     "Nghệ An"
+    ]
+   },
+   {
+    "bin": 4,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "loan_amount_mil": {
+  "variable": "loan_amount_mil",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.0,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "All",
+    "woe": 0.0,
+    "lo": null,
+    "hi": null
+   },
+   {
+    "bin": 1,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "age": {
+  "variable": "age",
+  "kind": "num",
+  "direction": "dec",
+  "iv_train": 0.12800418423864446,
+  "missing_rule": "gộp vào bin '(29, 37] (+Missing)'",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 22",
+    "woe": -0.648881327117888,
+    "lo": null,
+    "hi": 22.0
+   },
+   {
+    "bin": 1,
+    "label": "(22, 29]",
+    "woe": -0.32512957469612774,
+    "lo": 22.0,
+    "hi": 29.0
+   },
+   {
+    "bin": 2,
+    "label": "(29, 37] (+Missing)",
+    "woe": -0.019335160481214073,
+    "lo": 29.0,
+    "hi": 37.0
+   },
+   {
+    "bin": 3,
+    "label": "(37, 46]",
+    "woe": 0.2319857537462673,
+    "lo": 37.0,
+    "hi": 46.0
+   },
+   {
+    "bin": 4,
+    "label": "> 46",
+    "woe": 0.7332948835684623,
+    "lo": 46.0,
+    "hi": null
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "occupation": {
+  "variable": "occupation",
+  "kind": "cat",
+  "direction": "free",
+  "iv_train": 0.06429843976041694,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "Văn phòng | Khác",
+    "woe": 0.31206697086120877,
+    "categories": [
+     "Văn phòng",
+     "Khác"
+    ]
+   },
+   {
+    "bin": 1,
+    "label": "Công nhân",
+    "woe": -0.05457717930045185,
+    "categories": [
+     "Công nhân"
+    ]
+   },
+   {
+    "bin": 2,
+    "label": "Lao động phổ thông | Kinh doanh tự do",
+    "woe": -0.25570169133259074,
+    "categories": [
+     "Lao động phổ thông",
+     "Kinh doanh tự do"
+    ]
+   },
+   {
+    "bin": 3,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "home_status": {
+  "variable": "home_status",
+  "kind": "cat",
+  "direction": "free",
+  "iv_train": 0.08398691264738159,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "Sở hữu",
+    "woe": 0.673456393459417,
+    "categories": [
+     "Sở hữu"
+    ]
+   },
+   {
+    "bin": 1,
+    "label": "Thuê | Ở cùng gia đình",
+    "woe": -0.12558361828678902,
+    "categories": [
+     "Thuê",
+     "Ở cùng gia đình"
+    ]
+   },
+   {
+    "bin": 2,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "income_mil": {
+  "variable": "income_mil",
+  "kind": "num",
+  "direction": "dec",
+  "iv_train": 0.18040763859884984,
+  "missing_rule": "gộp vào bin '<= 6 (+Missing)'",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 6 (+Missing)",
+    "woe": -0.6128880564464727,
+    "lo": null,
+    "hi": 6.0
+   },
+   {
+    "bin": 1,
+    "label": "(6, 12]",
+    "woe": -0.09254395447286116,
+    "lo": 6.0,
+    "hi": 12.0
+   },
+   {
+    "bin": 2,
+    "label": "(12, 15]",
+    "woe": 0.14599216066335713,
+    "lo": 12.0,
+    "hi": 15.0
+   },
+   {
+    "bin": 3,
+    "label": "(15, 28]",
+    "woe": 0.36240791790969246,
+    "lo": 15.0,
+    "hi": 28.0
+   },
+   {
+    "bin": 4,
+    "label": "> 28",
+    "woe": 0.7372874358405943,
+    "lo": 28.0,
+    "hi": null
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "work_months": {
+  "variable": "work_months",
+  "kind": "num",
+  "direction": "dec",
+  "iv_train": 0.1861955727031986,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 12",
+    "woe": -0.48258119924822956,
+    "lo": null,
+    "hi": 12.0
+   },
+   {
+    "bin": 1,
+    "label": "(12, 27]",
+    "woe": -0.07148008022240414,
+    "lo": 12.0,
+    "hi": 27.0
+   },
+   {
+    "bin": 2,
+    "label": "(27, 50]",
+    "woe": 0.20063790911438345,
+    "lo": 27.0,
+    "hi": 50.0
+   },
+   {
+    "bin": 3,
+    "label": "(50, 79]",
+    "woe": 0.4216780112281618,
+    "lo": 50.0,
+    "hi": 79.0
+   },
+   {
+    "bin": 4,
+    "label": "> 79",
+    "woe": 0.7264778792088827,
+    "lo": 79.0,
+    "hi": null
+   },
+   {
+    "bin": 5,
+    "label": "Missing",
+    "woe": -0.5938948750883473
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "dti_pct": {
+  "variable": "dti_pct",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.2730777192708089,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 25",
+    "woe": 0.9351434529907798,
+    "lo": null,
+    "hi": 25.0
+   },
+   {
+    "bin": 1,
+    "label": "(25, 44]",
+    "woe": 0.3372701091847153,
+    "lo": 25.0,
+    "hi": 44.0
+   },
+   {
+    "bin": 2,
+    "label": "(44, 52]",
+    "woe": -0.08332143112443649,
+    "lo": 44.0,
+    "hi": 52.0
+   },
+   {
+    "bin": 3,
+    "label": "(52, 66]",
+    "woe": -0.29155781178871654,
+    "lo": 52.0,
+    "hi": 66.0
+   },
+   {
+    "bin": 4,
+    "label": "> 66",
+    "woe": -0.7544496733714353,
+    "lo": 66.0,
+    "hi": null
+   },
+   {
+    "bin": 5,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "cic_hist_months": {
+  "variable": "cic_hist_months",
+  "kind": "num",
+  "direction": "dec",
+  "iv_train": 0.366491235950826,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 5",
+    "woe": -1.0228751679657457,
+    "lo": null,
+    "hi": 5.0
+   },
+   {
+    "bin": 1,
+    "label": "(5, 12]",
+    "woe": -0.5057446011854806,
+    "lo": 5.0,
+    "hi": 12.0
+   },
+   {
+    "bin": 2,
+    "label": "(12, 19]",
+    "woe": -0.11454249665918206,
+    "lo": 12.0,
+    "hi": 19.0
+   },
+   {
+    "bin": 3,
+    "label": "(19, 37]",
+    "woe": 0.2300325616283348,
+    "lo": 19.0,
+    "hi": 37.0
+   },
+   {
+    "bin": 4,
+    "label": "(37, 49]",
+    "woe": 0.48828827227692545,
+    "lo": 37.0,
+    "hi": 49.0
+   },
+   {
+    "bin": 5,
+    "label": "(49, 91]",
+    "woe": 0.8338816863306279,
+    "lo": 49.0,
+    "hi": 91.0
+   },
+   {
+    "bin": 6,
+    "label": "> 91",
+    "woe": 1.2679081697861458,
+    "lo": 91.0,
+    "hi": null
+   },
+   {
+    "bin": 7,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "num_lenders": {
+  "variable": "num_lenders",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.19240925483875576,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 0",
+    "woe": 0.4652000943848353,
+    "lo": null,
+    "hi": 0.0
+   },
+   {
+    "bin": 1,
+    "label": "1",
+    "woe": 0.22739883663898047,
+    "lo": 0.0,
+    "hi": 1.0
+   },
+   {
+    "bin": 2,
+    "label": "2",
+    "woe": -0.0028619369827678795,
+    "lo": 1.0,
+    "hi": 2.0
+   },
+   {
+    "bin": 3,
+    "label": "3",
+    "woe": -0.33856879041706067,
+    "lo": 2.0,
+    "hi": 3.0
+   },
+   {
+    "bin": 4,
+    "label": "> 3",
+    "woe": -0.9380584540003984,
+    "lo": 3.0,
+    "hi": null
+   },
+   {
+    "bin": 5,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "card_util_pct": {
+  "variable": "card_util_pct",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.4546032801753236,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 30",
+    "woe": 1.5003427370177713,
+    "lo": null,
+    "hi": 30.0
+   },
+   {
+    "bin": 1,
+    "label": "(30, 43]",
+    "woe": 0.7119223053878507,
+    "lo": 30.0,
+    "hi": 43.0
+   },
+   {
+    "bin": 2,
+    "label": "(43, 59]",
+    "woe": 0.39231034517120605,
+    "lo": 43.0,
+    "hi": 59.0
+   },
+   {
+    "bin": 3,
+    "label": "(59, 73]",
+    "woe": -0.056434865851901175,
+    "lo": 59.0,
+    "hi": 73.0
+   },
+   {
+    "bin": 4,
+    "label": "(73, 81]",
+    "woe": -0.3832785153608086,
+    "lo": 73.0,
+    "hi": 81.0
+   },
+   {
+    "bin": 5,
+    "label": "(81, 91]",
+    "woe": -0.7149830898761406,
+    "lo": 81.0,
+    "hi": 91.0
+   },
+   {
+    "bin": 6,
+    "label": "> 91",
+    "woe": -1.2975421776048393,
+    "lo": 91.0,
+    "hi": null
+   },
+   {
+    "bin": 7,
+    "label": "Missing",
+    "woe": 0.3695963935151771
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "inq_6m": {
+  "variable": "inq_6m",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.30117623018004847,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 0",
+    "woe": 0.5753699306180543,
+    "lo": null,
+    "hi": 0.0
+   },
+   {
+    "bin": 1,
+    "label": "1",
+    "woe": 0.36758302840366586,
+    "lo": 0.0,
+    "hi": 1.0
+   },
+   {
+    "bin": 2,
+    "label": "2",
+    "woe": 0.01955784717605488,
+    "lo": 1.0,
+    "hi": 2.0
+   },
+   {
+    "bin": 3,
+    "label": "3",
+    "woe": -0.3845763952203197,
+    "lo": 2.0,
+    "hi": 3.0
+   },
+   {
+    "bin": 4,
+    "label": "4",
+    "woe": -0.7137624155920897,
+    "lo": 3.0,
+    "hi": 4.0
+   },
+   {
+    "bin": 5,
+    "label": "> 4",
+    "woe": -1.2201822211347486,
+    "lo": 4.0,
+    "hi": null
+   },
+   {
+    "bin": 6,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "dpd_cnt_12m": {
+  "variable": "dpd_cnt_12m",
+  "kind": "num",
+  "direction": "inc",
+  "iv_train": 0.47652444812135986,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 0",
+    "woe": 0.4471745129311262,
+    "lo": null,
+    "hi": 0.0
+   },
+   {
+    "bin": 1,
+    "label": "1",
+    "woe": -0.4823767364448146,
+    "lo": 0.0,
+    "hi": 1.0
+   },
+   {
+    "bin": 2,
+    "label": "> 1",
+    "woe": -1.6168773187370769,
+    "lo": 1.0,
+    "hi": null
+   },
+   {
+    "bin": 3,
+    "label": "Missing",
+    "woe": 0.0
+   }
+  ],
+  "unseen_woe": 0.0
+ },
+ "deposit_avg_3m_mil": {
+  "variable": "deposit_avg_3m_mil",
+  "kind": "num",
+  "direction": "dec",
+  "iv_train": 0.07262362526473075,
+  "missing_rule": "bin riêng",
+  "bins": [
+   {
+    "bin": 0,
+    "label": "<= 2",
+    "woe": -0.39093660933711155,
+    "lo": null,
+    "hi": 2.0
+   },
+   {
+    "bin": 1,
+    "label": "(2, 4]",
+    "woe": -0.09473986936300235,
+    "lo": 2.0,
+    "hi": 4.0
+   },
+   {
+    "bin": 2,
+    "label": "> 4",
+    "woe": 0.3568147052576857,
+    "lo": 4.0,
+    "hi": null
+   },
+   {
+    "bin": 3,
+    "label": "Missing",
+    "woe": -0.06774775743754144
+   }
+  ],
+  "unseen_woe": 0.0
+ }
+}
